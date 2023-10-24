@@ -14,11 +14,15 @@ wn = turtle.Screen()
 polygon = turtle.Turtle()
 polygon.color(line_color)
 
-lenght = 1000 / sides
+length = 1000 / sides
 degrees = 360 / sides
-while sides != 0:
-    polygon.forward(lenght)
+
+polygon.begin_fill()
+polygon.fillcolor(fill_color)
+for i in range(sides):
+    polygon.forward(length)
     polygon.left(degrees)
-    sides -= 1
+polygon.begin_fill()
+
 
 wn.exitonclick()
