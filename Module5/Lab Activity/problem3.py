@@ -11,18 +11,17 @@ line_color = input("What color of line you prefer: ")
 fill_color = input("What fill color you prefer: ")
 
 wn = turtle.Screen()
-polygon = turtle.Turtle()
-polygon.color(line_color)
+p = turtle.Turtle()
+p.color(line_color)
 
-length = 1000 / sides
+length = 800 / sides
 degrees = 360 / sides
 
-polygon.begin_fill()
-polygon.fillcolor(fill_color)
+p.begin_fill()
+p.fillcolor(fill_color)
 for i in range(sides):
-    polygon.forward(length)
-    polygon.left(degrees)
-polygon.begin_fill()
-
+    p.forward(length)
+    p.left(degrees)
+p.end_fill()
 
 wn.exitonclick()
