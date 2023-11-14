@@ -17,7 +17,7 @@ class Employee:
             return f"Sr. boss I am currently making {self.pay}, and I want to make double than that!"
 
 
-emp_1 = Employee("David", 7)
+emp_1 = Employee("David", 8)
 
 print(emp_1.request_raise())
 
