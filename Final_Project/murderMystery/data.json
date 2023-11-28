@@ -1,0 +1,20 @@
+{
+  "chapter_1": {
+    "task_1": {
+      "title": "Investigate Crime Scene for clues",
+      "required_items": ["rope", "coat", "first aid kit"]
+    },
+    "task_1": {
+      "title": "Investigate Crime Scene for clues",
+      "required_items": ["rope", "coat", "first aid kit"]
+    }
+  },
+  "chapter_2": {
+  },
+  "chapter_3": {
+  },
+  "chapter_4": {
+  },
+  "chapter_5": {
+  }
+}
