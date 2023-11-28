@@ -10,7 +10,5 @@ def is_five_here(values):
 
 
 if __name__ == "__main__":
-    test_values_1 = [3, 5, 6, 7]
-    test_values_2 = [3, 6, 7, "five", 5 + 1]
+    test_values_1 = [int(x) for x in input("Enter a number: ").split()]
     print(is_five_here(test_values_1))
-    print(is_five_here(test_values_2))

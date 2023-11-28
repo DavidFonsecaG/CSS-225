@@ -4,11 +4,10 @@
 
 def leap_year(year):
     """Function that checks if a year is leap or not"""
-    if year % 4 == 0:
-        if year % 100 == 0:
-            return year % 400 == 0
+    if year % 4 == 0 and year % 100 != 0 or (year % 400 == 0):
         return True
-    return False
+    else:
+        return False
 
 
 if __name__ == "__main__":
