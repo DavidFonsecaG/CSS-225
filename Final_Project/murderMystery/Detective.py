@@ -1,21 +1,15 @@
 class Detective:
 
-    def __init__(self, name, town, description, objective):
+    def __init__(self, name):
         self.name = name
         self.clues = []
         self.tools = []
-        self.town = town
-        self.description = description
-        self.objective = objective
+
+    def set_name(self, name):
+        self.name = name
 
     def get_name(self):
         return self.name
-
-    def get_town(self):
-        return self.town
-
-    def get_objective(self):
-        return self.objective
 
     def get_clues(self):
         return self.clues
@@ -25,9 +19,3 @@ class Detective:
 
     def tool_acquired(self, tool):
         return tool in self.tools
-
-    def chose_action(self):
-        return input("--> ")
-
-    def introduce_self(self):
-        return "\nYou are detective " + self.name + self.description

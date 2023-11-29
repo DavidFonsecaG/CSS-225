@@ -1,20 +1,23 @@
 {
-  "chapter_1": {
-    "task_1": {
-      "title": "Investigate Crime Scene for clues",
-      "required_items": ["rope", "coat", "first aid kit"]
+  "intro": "\nAs a seasoned investigator known for your sharp instincts \nand relentless pursuit of justice, recently transferred to \nthe quiet town of Raven's Hollow, you're about to face a \ncase that will challenge your skills and intuition like never before",
+  "chapters": {
+    "chapter_1": {
+      "Investigate Crime Scene for clues": {
+        "required_items": ["rope", "coat", "first aid kit"]
+      },
+      "task_2": {
+        "title": "Investigate Crime Scene for clues",
+        "required_items": ["rope", "coat", "first aid kit"]
+      }
     },
-    "task_1": {
-      "title": "Investigate Crime Scene for clues",
-      "required_items": ["rope", "coat", "first aid kit"]
+    "chapter_2": {
+    },
+    "chapter_3": {
+    },
+    "chapter_4": {
+    },
+    "chapter_5": {
     }
-  },
-  "chapter_2": {
-  },
-  "chapter_3": {
-  },
-  "chapter_4": {
-  },
-  "chapter_5": {
   }
 }
+
