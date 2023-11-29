@@ -1,22 +1,30 @@
 {
-  "intro": "\nAs a seasoned investigator known for your sharp instincts \nand relentless pursuit of justice, recently transferred to \nthe quiet town of Raven's Hollow, you're about to face a \ncase that will challenge your skills and intuition like never before",
   "chapters": {
-    "chapter_1": {
-      "Investigate Crime Scene for clues": {
-        "required_items": ["rope", "coat", "first aid kit"]
-      },
-      "task_2": {
-        "title": "Investigate Crime Scene for clues",
-        "required_items": ["rope", "coat", "first aid kit"]
-      }
+    "1": {
+      "Investigate Crime Scene for clues": {},
+      "Interview Witnesses in the town square": {},
+      "Examine the mayor's office for additional info": {},
+      "Uncover meaning behind cryptic message": {}
     },
-    "chapter_2": {
+    "2": {
+      "Meet the informant in the abandoned warehouse": {},
+      "Navigate the darkened streets": {},
+      "Piece together connections between mayor.": {},
+      "Uncover the informant identity": {}
     },
-    "chapter_3": {
+    "3": {
+      "Confront the shadowy figure and learn their motives.": {},
+      "Uncover the mayor's involvement in the syndicate's activities.": {},
+      "Explore the hidden Chamber": {}
     },
-    "chapter_4": {
+    "4": {
+      "Attend the gala": {},
+      "Engage the influential figures": {},
+      "Uncover Connections": {},
+      "Navigate Trust and Deception": {}
     },
-    "chapter_5": {
+    "5": {
+      "Clandestine Ritual": {}
     }
   }
 }
