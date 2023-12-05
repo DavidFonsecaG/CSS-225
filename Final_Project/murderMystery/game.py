@@ -1,22 +1,16 @@
 # Main menu. Function that starts or quits the game.
-import global_variables as gv
-import chapters.one as c_one
-import time
+from game_state import GameState
+from Final_Project.murderMystery.game_chapter import GameChapter
 
 
-def intro():
-    # Get player's name
-    player_name = input("Let's start with your name: ")
-    # Initialize global variables
-    gv.g_variables(player_name)
+def start(game_data):
+    game_state = GameState(game_data)
 
-    # Game objective
-    print(f"\n{player_name}, your objective is to solve the mysterious murder of Mayor Richard Thornton."
-          "\nAs you explore the secrets of Raven's Hollow, you must gather clues,"
-          "\ninterrogate suspects, and navigate a web of lies to uncover the truth.")
-    time.sleep(2)
+    while True:
+        chapter_number = game_state.chapter
+        current_chapter = GameChapter(game_state, chapter_number)
+        current_chapter.display_options()
+        player_choice = input("Choose an option: ")
 
-
-def start(data):
-    c_one.start(data["chapters"]["1"])
-
+        if current_chapter.process_choice(player_choice):
+            break

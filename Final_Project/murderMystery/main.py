@@ -7,27 +7,18 @@ import util as u
 
 
 def main():
-    # Game Intro
-    game.intro()
+    print("\nWelcome to Murder Mystery!")
+
+    # Game objective
+    print("\nYour objective is to solve the mysterious murder of Mayor Richard Thornton.")
 
     # Get game data from json file
-    data = u.connect_data()
+    game_data = u.connect_data()
 
     # Start Game
-    game.start(data)
+    game.start(game_data)
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    while True:
-        begin = input("\nWelcome to Murder Mystery"
-                      "\nAs a seasoned investigator known for your sharp instincts, you're "
-                      "\nabout to face a case that will challenge your skills and intuition like never before."
-                      "\nS to Start: ")
-
-        if begin.lower() == "s":
-            main()
-
-        else:
-            print("See you next time!")
-            exit()
+    main()
