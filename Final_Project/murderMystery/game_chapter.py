@@ -52,7 +52,8 @@ class GameChapter(Chapter):
             if self.game_state.weapon_found:
                 self.game_state.action_completed = True
                 print(f"You successfully completed scene {self.game_state.chapter}.")
-                self.game_state.next_chapter()
+                if self.chapter_number < len(self.chapter_data):
+                    self.game_state.next_chapter()
             else:
                 print("You need a specific item to proceed.")
 
@@ -63,10 +64,8 @@ class GameChapter(Chapter):
                     print("With the evidence and resources at hand, you confront the mastermind behind the conspiracy.")
                     print("You successfully solve the case and bring justice to the town.")
                     self.game_state.game_solved = True  # Flag to indicate the game is solved
-                    return True  # Indicate that the game chapter processing should stop
                 else:
                     print("You don't have enough evidence and resources to solve the case yet.")
-            return False  # Continue the chapter processing
 
         time.sleep(2)
 

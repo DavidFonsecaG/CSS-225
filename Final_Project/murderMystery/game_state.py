@@ -6,6 +6,7 @@ class GameState:
         self.interaction_completed = False
         self.action_completed = False
         self.inventory = {"weapons": [], "clues": []}
+        self.game_solved = False
 
     def add_weapon(self, weapon):
         self.inventory["weapons"].append(weapon)
