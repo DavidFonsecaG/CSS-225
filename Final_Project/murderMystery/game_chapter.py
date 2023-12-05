@@ -56,6 +56,18 @@ class GameChapter(Chapter):
             else:
                 print("You need a specific item to proceed.")
 
+        # Additional logic for Chapter 4 to solve the game
+        if self.chapter_number == 4:
+            if action == 3:  # Final action to solve the game
+                if self.game_state.weapon_found and self.game_state.has_clue(self.chapter_data['clues'][0]):
+                    print("With the evidence and resources at hand, you confront the mastermind behind the conspiracy.")
+                    print("You successfully solve the case and bring justice to the town.")
+                    self.game_state.game_solved = True  # Flag to indicate the game is solved
+                    return True  # Indicate that the game chapter processing should stop
+                else:
+                    print("You don't have enough evidence and resources to solve the case yet.")
+            return False  # Continue the chapter processing
+
         time.sleep(2)
 
     def find_weapon(self):
