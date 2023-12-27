@@ -14,3 +14,6 @@ def start(game_data):
 
         if current_chapter.process_choice(player_choice):
             break
+        if current_chapter.game_state.game_solved:
+            break
+

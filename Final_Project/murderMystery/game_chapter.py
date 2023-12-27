@@ -1,5 +1,4 @@
 import time
-import random
 
 
 class Chapter:
@@ -52,9 +51,20 @@ class GameChapter(Chapter):
             if self.game_state.weapon_found:
                 self.game_state.action_completed = True
                 print(f"You successfully completed scene {self.game_state.chapter}.")
-                self.game_state.next_chapter()
+                if self.chapter_number < len(self.chapter_data):
+                    self.game_state.next_chapter()
             else:
                 print("You need a specific item to proceed.")
+
+        # Additional logic for Chapter 4 to solve the game
+        if self.chapter_number == 4:
+            if action == 3:  # Final action to solve the game
+                if self.game_state.weapon_found and self.game_state.has_clue(self.chapter_data['clues'][0]):
+                    print("With the evidence and resources at hand, you confront the mastermind behind the conspiracy.")
+                    print("You successfully solve the case and bring justice to the town.")
+                    self.game_state.game_solved = True  # Flag to indicate the game is solved
+                else:
+                    print("You don't have enough evidence and resources to solve the case yet.")
 
         time.sleep(2)
 
